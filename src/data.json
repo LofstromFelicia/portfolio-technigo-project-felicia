@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "News site",
-      "image": "/public/ai-tech-project-img.jpg",
+      "image": "/ai-tech-project-img.jpg",
       "tags": [
         "HTML5",
         "CSS3"
@@ -12,7 +12,7 @@
     },
     {
       "name": "Business site",
-      "image": "/public/business-site-img.jpg",
+      "image": "/business-site-img.jpg",
       "tags": [
         "HTML5",
         "CSS3"
@@ -22,7 +22,7 @@
     },
     {
       "name": "Pizzabot",
-      "image": "/public/pizzabot-img.jpg",
+      "image": "/pizzabot-img.jpg",
       "tags": [
         "HTML5",
         "CSS3",
@@ -33,7 +33,7 @@
     },
     {
       "name": "Library",
-      "image": "/public/grand-digital-library-img.jpg",
+      "image": "/grand-digital-library-img.jpg",
       "tags": [
         "HTML5",
         "CSS3",
@@ -44,7 +44,7 @@
     },
     {
       "name": "Weather app",
-      "image": "/public/weather-app-img.jpg",
+      "image": "/weather-app-img.jpg",
       "tags": [
         "HTML5",
         "CSS3",
