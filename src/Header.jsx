@@ -1,8 +1,11 @@
 export const Header = () => {
   return (
-    <header className="hero-section">
+    <header className="hero-section pinned-block">
+
+      <span className="block-pin pin-top center">📌</span>
+
       <div className="hero-text-content">
-        <p className="hero-greeting">Hej, My name is Felicia Löfström</p>
+        <p className="hero-greeting">Hej, My name is Felicia Löfström <span className="animated-emoji">🌻</span></p>
 
         <h1>Aspiring Web Developer</h1>
 

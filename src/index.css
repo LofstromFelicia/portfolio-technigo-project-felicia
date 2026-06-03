@@ -216,7 +216,7 @@ body {
 
 .btn-primary {
   background-color: var(--sunflower);
-  color: var(--moss-green);
+  color: var(--bg-main);
   border: 2px solid var(--sunflower);
 }
 
@@ -309,6 +309,111 @@ body {
   font-size: 0.8rem;
   color: rgba(163, 184, 176, 0.3);
   margin-top: 40px;
+}
+
+/* --- PINNED BOARD EFFECT --- */
+.pinned-block {
+  position: relative;
+}
+
+.block-pin {
+  position: absolute;
+  font-size: 2.6rem;
+  z-index: 10;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
+  animation: pinNudge 6s ease-in-out infinite;
+}
+
+.pin-top-center {
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pin-top-left {
+  top: -24px;
+  left: 8px;
+  transform: rotate(-15deg);
+}
+
+@keyframes pinNudge {
+
+  0%,
+  90%,
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+
+  93% {
+    transform: translateY(1px) rotate(-12deg);
+  }
+
+  96% {
+    transform: translateY(-1px) rotate(-18deg);
+  }
+}
+
+.pin-top-center {
+  animation: pinNudgeCenter 6s ease-in-out infinite;
+}
+
+@keyframes pinNudgeCenter {
+
+  0%,
+  90%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  95% {
+    transform: translateX(-50%) translateY(1px) scale(1.05);
+  }
+}
+
+/* --- EMOJI ANIMATIONS --- */
+.animated-emoji {
+  display: inline-block;
+  animation: floatAndWobble 4s ease-in-out infinite;
+  transform-origin: bottom center;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+@keyframes floatAndWobble {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-2px) rotate(3deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  75% {
+    transform: translateY(-1px) rotate(1.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.spinning-emoji {
+  display: inline-block;
+  animation: slowSpin 20s linear infinite;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* --- RESPONSIVE DESIGN --- */
