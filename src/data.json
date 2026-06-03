@@ -2,57 +2,57 @@
   "projects": [
     {
       "name": "News site",
-      "image": "",
+      "image": "/public/ai-tech-project-img.jpg",
       "tags": [
         "HTML5",
         "CSS3"
       ],
-      "netlify": "link",
-      "github": "link"
+      "cloudflare": "https://ai-tech-news-site-project-felicia.pages.dev/",
+      "github": "https://github.com/LofstromFelicia/AI-tech-news-site-project-felicia"
     },
     {
       "name": "Business site",
-      "image": "",
+      "image": "/public/business-site-img.jpg",
       "tags": [
         "HTML5",
         "CSS3"
       ],
-      "netlify": "link",
-      "github": "link"
+      "cloudflare": "project-business-site-felicia.pages.dev",
+      "github": "https://github.com/LofstromFelicia/project-business-site-felicia"
     },
     {
       "name": "Pizzabot",
-      "image": "",
+      "image": "/public/pizzabot-img.jpg",
       "tags": [
         "HTML5",
         "CSS3",
         "JavaScript"
       ],
-      "netlify": "link",
-      "github": "link"
+      "cloudflare": "project-pizzabot-felicia.pages.dev",
+      "github": "https://github.com/LofstromFelicia/project-pizzabot-felicia"
     },
     {
       "name": "Library",
-      "image": "",
+      "image": "/public/grand-digital-library-img.jpg",
       "tags": [
         "HTML5",
         "CSS3",
         "JavaScript"
       ],
-      "netlify": "link",
-      "github": "link"
+      "cloudflare": "the-grand-digital-library-project-technigo.pages.dev",
+      "github": "https://github.com/LofstromFelicia/technigo-project-library"
     },
     {
       "name": "Weather app",
-      "image": "",
+      "image": "/public/weather-app-img.jpg",
       "tags": [
         "HTML5",
         "CSS3",
         "JavaScript",
         "APIs"
       ],
-      "netlify": "link",
-      "github": "link"
+      "cloudflare": "technigo-project-weather-app.pages.dev",
+      "github": "https://github.com/LofstromFelicia/technigo-project-weather-app"
     }
   ]
 }

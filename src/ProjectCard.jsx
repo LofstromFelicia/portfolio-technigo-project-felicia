@@ -22,7 +22,7 @@ export const ProjectCard = ({ project }) => {
         </div>
 
         <div className="project-links">
-          <a href={project.netlify} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a href={project.cloudflare} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             See Live
           </a>
           <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
