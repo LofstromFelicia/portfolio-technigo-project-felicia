@@ -1,16 +1,17 @@
 /* --- DESIGN SYSTEM & VARIABLES --- */
 :root {
-  --bg-main: #121f1a;
-  --bg-card: #1b2e26;
+  --bg-board: #2e1f16;
+  --wood-frame: #5c3a21;
+  --bg-note: #fbf9f1;
 
   --sunflower: #ffc93c;
   --sunflower-hover: #e0ae2b;
 
-  --text-main: #f0f4f2;
-  --text-muted: #a3b8b0;
+  --text-main: #1a1a1a;
+  --text-muted: #555555;
 
   --radius-round: 50%;
-  --radius-box: 0px;
+  --radius-box: 2px;
   --spacing: 24px;
 }
 
@@ -21,11 +22,17 @@
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: var(--bg-board);
+  background-image: url('/cork.jpg');
+  background-repeat: repeat;
+
   color: var(--text-main);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  border: 12px solid var(--wood-frame);
+  min-height: 100vh;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 /* --- LAYOUT CONTAINERS --- */
@@ -35,6 +42,18 @@ body {
   padding: 32px 20px;
 }
 
+/* --- NOTES PAPER (Hero, Project, Skills) --- */
+.hero-section,
+.project-card,
+.skills-category {
+  background-color: var(--bg-note) !important;
+  color: var(--text-main) !important;
+  border-radius: var(--radius-box);
+  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.35);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* --- HERO / HEADER SECTION --- */
 .hero-section {
   display: flex;
@@ -42,10 +61,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 40px 20px;
-  background-color: var(--bg-card);
-  border-radius: 12px;
   margin-bottom: 40px;
-  border: 1px solid rgba(240, 244, 242, 0.05);
 }
 
 .hero-text-content {
@@ -58,7 +74,7 @@ body {
 .hero-greeting {
   font-size: 0.95rem;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 12px;
@@ -80,7 +96,7 @@ body {
   overflow: hidden;
   margin-bottom: 24px;
   border: 4px solid var(--sunflower);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hero-avatar {
@@ -104,7 +120,7 @@ body {
 }
 
 .hero-socials a {
-  color: var(--sunflower);
+  color: #c28a00;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
@@ -117,39 +133,83 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- PROJECTS SECTION & GRID --- */
+/* --- BOARD BIG TEXT --- */
 .projects-section h2,
 .skills-section h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
   letter-spacing: -0.5px;
-  color: var(--text-main);
+  color: var(--sunflower);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* --- PROJECTS GRID & CARD (MOBILE FIRST) --- */
+/* --- PROJECTS GRID & CARD (Charming crocked notes) --- */
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
 }
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-card);
-  border-radius: var(--radius-box);
-  overflow: hidden;
-  border: 1px solid rgba(240, 244, 242, 0.03);
+/* Charming rotating notes */
+.project-card:nth-child(odd) {
+  transform: rotate(-1deg);
+}
+
+.project-card:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+/* --- POST IT COLORS PROJECT CARDS --- */
+
+/* 1, 5, 9 = yellow */
+.project-card:nth-child(4n+1) {
+  background-color: #fff2a1 !important;
+}
+
+/* 2, 6, 10 = pink */
+.project-card:nth-child(4n+2) {
+  background-color: #ffbfa3 !important;
+}
+
+/* 3, 7, 11 = mintgreen */
+.project-card:nth-child(4n+3) {
+  background-color: #b8f2e6 !important;
+}
+
+/* 4, 8, 12 = pastelblue */
+.project-card:nth-child(4n+4) {
+  background-color: #aed9e0 !important;
+}
+
+/* --- POST IT NOTES SKILLS --- */
+/* 1 skill = pink */
+.skills-category:nth-child(1) {
+  background-color: #ffbfa3 !important;
+}
+
+/* 2 skill = mintgreen */
+.skills-category:nth-child(2) {
+  background-color: #b8f2e6 !important;
+}
+
+/* 3 skill = yellow */
+.skills-category:nth-child(3) {
+  background-color: #fff2a1 !important;
+}
+
+.project-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.45);
 }
 
 .project-image-container {
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background-color: #121f1a;
+  background-color: #ddd;
 }
 
 .project-image {
@@ -184,9 +244,9 @@ body {
 }
 
 .project-tag {
-  background-color: rgba(240, 244, 242, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   color: var(--text-muted);
-  border: 1px solid rgba(163, 184, 176, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   padding: 3px 8px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -216,28 +276,28 @@ body {
 
 .btn-primary {
   background-color: var(--sunflower);
-  color: var(--bg-main);
+  color: #1a1a1a;
   border: 2px solid var(--sunflower);
 }
 
 .btn-primary:hover {
-  background-color: transparent;
+  background-color: var(--bg-board);
   color: var(--sunflower);
+  border-color: var(--bg-board);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--text-main);
-  border: 2px solid rgba(240, 244, 242, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary:hover {
-  border-color: var(--sunflower);
-  color: var(--sunflower);
-  background-color: rgba(255, 201, 60, 0.02);
+  border-color: var(--bg-board);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* --- SKILLS --- */
+/* --- SKILLS NOTES --- */
 .skills-section {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -250,20 +310,29 @@ body {
 }
 
 .skills-category {
-  background-color: var(--bg-card);
   padding: 24px;
-  border-radius: var(--radius-box);
-  border: 1px solid rgba(240, 244, 242, 0.03);
   text-align: center;
+}
+
+.skills-category:nth-child(1) {
+  transform: rotate(1deg);
+}
+
+.skills-category:nth-child(2) {
+  transform: rotate(-1.5deg);
+}
+
+.skills-category:nth-child(3) {
+  transform: rotate(0.5deg);
 }
 
 .skills-category h3 {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--sunflower);
+  color: #c28a00;
   margin-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 201, 60, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 8px;
   display: inline-block;
 }
@@ -280,10 +349,14 @@ body {
 
 /* --- FOOTER --- */
 .footer-section {
+  background-color: var(--bg-note);
+  color: var(--text-main);
   text-align: center;
-  padding: 40px 0 10px 0;
+  padding: 40px var(--spacing);
   margin-top: 60px;
-  border-top: 1px solid rgba(240, 244, 242, 0.05);
+  border-radius: var(--radius-box);
+  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.35);
+  transform: rotate(-0.5deg);
 }
 
 .footer-section h2 {
@@ -302,12 +375,12 @@ body {
 
 .footer-email {
   font-weight: 700;
-  color: var(--sunflower);
+  color: #c28a00;
 }
 
 .footer-credits {
   font-size: 0.8rem;
-  color: rgba(163, 184, 176, 0.3);
+  color: rgba(0, 0, 0, 0.4);
   margin-top: 40px;
 }
 
