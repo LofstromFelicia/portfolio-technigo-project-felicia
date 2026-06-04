@@ -2,10 +2,12 @@ import { Tag } from "./Tag"
 
 export const ProjectCard = ({ project }) => {
   return (
-    <article className="project-card">
+    <article className="project-card pinned-block">
+      <span className="block-pin pin-project">📌</span>
+
       <div className="project-image-container">
         {project.image ? (
-          <img src={project.image} alt={project.name} className="project-image" />
+          <img src={project.image} alt={project.title || project.name} className="project-image" />
         ) : (
           <div className="project-image-placeholder">Kodprojekt</div>
         )}
@@ -13,6 +15,12 @@ export const ProjectCard = ({ project }) => {
 
       <div className="project-info">
         <h3>{project.name}</h3>
+
+        {project.description && (
+          <p className="project-description" style={{ marginBottom: '16px', fontSize: '0.95rem' }}>
+            {project.description}
+          </p>
+        )}
 
         {/* Inner Map for all tags */}
         <div className="tags-container">
@@ -22,10 +30,19 @@ export const ProjectCard = ({ project }) => {
         </div>
 
         <div className="project-links">
-          <a href={project.cloudflare} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a
+            href={project.cloudflare}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             See Live
           </a>
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+          <a href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
             GitHub
           </a>
         </div>
