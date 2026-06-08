@@ -3,16 +3,11 @@
   --bg-board: #2e1f16;
   --wood-frame: #5c3a21;
   --bg-note: #fbf9f1;
-
   --sunflower: #ffc93c;
   --sunflower-hover: #e0ae2b;
-
-  --text-main: #1a1a1a;
-  --text-muted: #555555;
-
-  --radius-round: 50%;
+  --text-main: #141e30;
+  --text-muted: #2a3b5c;
   --radius-box: 2px;
-  --spacing: 24px;
 }
 
 * {
@@ -25,9 +20,8 @@ body {
   background-color: var(--bg-board);
   background-image: url('/cork.jpg');
   background-repeat: repeat;
-
   color: var(--text-main);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   border: 12px solid var(--wood-frame);
@@ -35,7 +29,7 @@ body {
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-/* --- FONTS FOR POST NOTES --- */
+/* --- GLOBAL FONTS --- */
 .hero-section,
 .project-card,
 .skills-category,
@@ -44,41 +38,40 @@ body {
 }
 
 .project-info h3,
-.skills-category h3,
 .hero-section h1,
-.footer-section h2 {
+.footer-section h2,
+.projects-section h2,
+.skills-section h2 {
   font-family: 'Caveat', cursive !important;
-  font-size: 1.8rem;
-  letter-spacing: 0.5px;
 }
 
-/* --- LAYOUT CONTAINERS --- */
-.app-container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 32px 20px;
-}
-
-/* --- NOTES PAPER (Hero, Project, Skills) --- */
+/* --- SHARED NOTE STYLES --- */
 .hero-section,
 .project-card,
-.skills-category {
-  background-color: var(--bg-note) !important;
-  color: var(--text-main) !important;
+.skills-category,
+.footer-section {
+  background-color: var(--bg-note);
   border-radius: var(--radius-box);
   box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.35);
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
 }
 
-/* --- HERO / HEADER SECTION --- */
+/* --- HERO SECTION --- */
 .hero-section {
+  background-color: #fff2a1;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px 20px;
   margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.hero-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  color: var(--text-main);
 }
 
 .hero-text-content {
@@ -89,31 +82,22 @@ body {
 }
 
 .hero-greeting {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 12px;
 }
 
-.hero-section h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  color: var(--text-main);
-  margin-bottom: 24px;
-}
-
 .hero-avatar-container {
-  width: 130px;
-  height: 130px;
-  border-radius: var(--radius-round);
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
   overflow: hidden;
   margin-bottom: 24px;
-  border: 4px solid var(--sunflower);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 6px solid #ffffff;
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-avatar {
@@ -124,38 +108,27 @@ body {
 
 .hero-description {
   max-width: 540px;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text-muted);
-  margin-bottom: 24px;
 }
 
 /* --- SOCIAL STICKERS --- */
 .hero-socials {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: -30px;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 5;
+  gap: 35px;
+  margin: 85px 0;
 }
 
 .hero-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 75px;
-  height: 75px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
-
-  background-color: #ffffff;
-  border: 4px solid #ffffff;
-
+  background: #fff;
+  border: 4px solid #fff;
   box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.45);
-
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .hero-socials a img {
@@ -178,17 +151,29 @@ body {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* --- BOARD BIG TEXT --- */
+/* --- LAYOUT CONTAINERS --- */
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 20px;
+  position: relative;
+}
+
+/* --- BOARD BIG TEXT (MARKER ON BOARD) --- */
 .projects-section h2,
 .skills-section h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-family: 'Caveat', cursive !important;
+  font-size: 4.5rem;
+  font-weight: 900;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  letter-spacing: -0.5px;
-  color: var(--sunflower);
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 60px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: #ffe066;
+  text-shadow: 2px 3px 0px #1a1a1a,
+    0px 0px 8px rgba(255, 224, 102, 0.4);
+  display: block;
+  transform: rotate(-1.5deg);
 }
 
 /* --- PROJECTS GRID & CARD (Charming crocked notes) --- */
@@ -196,6 +181,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 36px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-box);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
 }
 
 /* Charming rotating notes */
@@ -228,30 +222,6 @@ body {
   background-color: #aed9e0 !important;
 }
 
-/* --- POST IT NOTES SKILLS --- */
-/* 1 skill = pink */
-.skills-category:nth-child(1) {
-  background-color: #ffbfa3 !important;
-}
-
-/* 2 skill = mintgreen */
-.skills-category:nth-child(2) {
-  background-color: #b8f2e6 !important;
-}
-
-/* 3 skill = yellow */
-.skills-category:nth-child(3) {
-  background-color: #fff2a1 !important;
-}
-
-/* --- PROJECT CARDS (POST IT WITH PHOTOS) */
-.project-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--radius-box);
-  padding: 24px;
-}
-
 .project-description {
   color: var(--text-muted);
   line-height: 1.4;
@@ -262,7 +232,6 @@ body {
   width: 100%;
   height: 200px;
   overflow: hidden;
-
   background-color: #ffffff !important;
   border: 6px solid #ffffff;
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
@@ -383,53 +352,76 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  border: none;
 }
 
+/* --- POST IT NOTES SKILLS --- */
+/* 1 skill = pink */
 .skills-category:nth-child(1) {
+  background-color: #ffbfa3 !important;
   margin-right: auto;
   margin-left: 10px;
   transform: rotate(2deg);
 }
 
+/* 2 skill = mintgreen */
 .skills-category:nth-child(2) {
+  background-color: #b8f2e6 !important;
   margin-left: auto;
   margin-right: 10px;
   transform: rotate(-3deg);
 }
 
+/* 3 skill = yellow */
 .skills-category:nth-child(3) {
+  background-color: #fff2a1 !important;
   margin-left: auto;
   margin-right: auto;
   transform: rotate(1deg);
 }
 
 .skills-category h3 {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 2px;
-  color: #c28a00;
-  margin-bottom: 16px;
+  color: var(--text-muted);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 8px;
+  margin-bottom: 20px;
   display: inline-block;
 }
 
 .skills-category ul {
   list-style: none;
+  width: 100%;
 }
 
 .skills-category li {
   font-size: 1rem;
   line-height: 1.8;
   color: var(--text-muted);
+  text-align: left;
+  padding-left: 15px;
+  position: relative;
+}
+
+.skills-category li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
 }
 
 /* --- FOOTER --- */
 .footer-section {
-  background-color: var(--bg-note);
+  background-color: #aed9e0 !important;
   color: var(--text-main);
   text-align: center;
-  padding: 40px var(--spacing);
+  padding: 40px 20px;
   margin-top: 60px;
   border-radius: var(--radius-box);
   box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.35);
@@ -452,22 +444,14 @@ body {
 
 .footer-email {
   font-weight: 700;
-  color: #c28a00;
+  color: var(--text-main);
 }
 
 .footer-credits {
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--text-muted);
+  opacity: 0.6;
   margin-top: 40px;
-}
-
-/* --- POST-IT HEADER & FOOTER --- */
-.hero-section {
-  background-color: #fff2a1 !important;
-}
-
-.footer-section {
-  background-color: #aed9e0 !important;
 }
 
 /* --- PINNED BOARD EFFECT --- */
@@ -486,19 +470,20 @@ body {
   font-size: 2.6rem;
   z-index: 10;
   filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
-  animation: pinNudge 6s ease-in-out infinite;
 }
 
 .pin-top-center {
   top: -28px;
   left: 50%;
   transform: translateX(-50%);
+  animation: pinNudge 6s ease-in-out infinite;
 }
 
 .pin-top-left {
   top: -24px;
   left: 8px;
   transform: rotate(-15deg);
+  animation: pinNudge 6s ease-in-out infinite;
 }
 
 @keyframes pinNudge {
@@ -516,10 +501,6 @@ body {
   96% {
     transform: translateY(-1px) rotate(-18deg);
   }
-}
-
-.pin-top-center {
-  animation: pinNudgeCenter 6s ease-in-out infinite;
 }
 
 @keyframes pinNudgeCenter {
@@ -578,6 +559,76 @@ body {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+.desktop-stickers {
+  display: none;
+}
+
+@media (min-width: 1150px) {
+  .skills-sticker-wrapper {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  .desktop-stickers {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .tech-sticker {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    filter:
+      drop-shadow(3px 0px 0px #ffffff) drop-shadow(-3px 0px 0px #ffffff) drop-shadow(0px 3px 0px #ffffff) drop-shadow(0px -3px 0px #ffffff) drop-shadow(2px 5px 8px rgba(0, 0, 0, 0.5));
+    opacity: 0.85;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
+  }
+
+  .tech-sticker:hover {
+    opacity: 1;
+    transform: scale(1.15) rotate(0deg) !important;
+  }
+
+  /* PLACEMENT OF STICKERS ON BOARD DESKTOP */
+  .s-left-1 {
+    top: 12%;
+    left: 200px;
+    transform: rotate(-12deg);
+  }
+
+  .s-left-2 {
+    top: 45%;
+    left: 340px;
+    transform: rotate(8deg);
+  }
+
+  .s-left-3 {
+    bottom: 10%;
+    left: -90px;
+    transform: rotate(-15deg);
+  }
+
+  .s-right-1 {
+    top: 15%;
+    right: 35px;
+    transform: rotate(15deg);
+  }
+
+  .s-right-2 {
+    bottom: 23%;
+    right: -135px;
+    transform: rotate(5deg);
   }
 }
 

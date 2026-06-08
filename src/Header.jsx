@@ -11,8 +11,9 @@ export const Header = () => {
             <img src="/profile-pic.jpg" alt="Felicia Löfström" className="hero-avatar" />
           </div>
           <p className="hero-description">
-            Welcome to my portfolio!
-            Here is a selection of what I have created during my web developing bootcamp!
+            Welcome to my digital noticeboard! <br />
+            I'm a web developer and maker who loves building things from scratch—whether it's clean code or physical creations. Here is a selection of my projects from my web development bootcamp. <br />
+            Take a look around!
           </p>
         </div>
       </header>

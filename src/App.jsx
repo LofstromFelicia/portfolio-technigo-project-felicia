@@ -9,12 +9,22 @@ export const App = () => {
 
   return (
     <div className="app-container">
-      {/* Hero / Header Section */}
+      {/* Hero/Header Section */}
       <Header />
 
       {/* Main Section with Project Grid */}
       <main className="main-content">
-        <Skills />
+        <div className="skills-sticker-wrapper" style={{ postion: 'relative' }} >
+          <Skills />
+
+          <div className="desktop-stickers">
+            <img src="/vscode.png" className="tech-sticker s-left-1" alt="VS Code Sticker" />
+            <img src="/javascript.png" className="tech-sticker s-right-1" alt="JavaScript Sticker" />
+            <img src="/react.png" className="tech-sticker s-left-2" alt="React Sticker" />
+            <img src="/html.png" className="tech-sticker s-right-2" alt="HTML Sticker" />
+            <img src="/css.png" className="tech-sticker s-left-3" alt="CSS Sticker" />
+          </div>
+        </div>
 
         <section className="projects-section">
           <h2>My Projects <span className="animated-emoji">💻</span></h2>
