@@ -5,10 +5,11 @@ export const Header = () => {
         <span className="block-pin pin-top-center">📌</span>
 
         <div className="hero-text-content">
-          <p className="hero-greeting">Hej, My name is Felicia Löfström <span className="animated-emoji">🌻</span></p>
+          <p className="hero-greeting">Hej, My name is Felicia Löfström</p>
           <h1>Aspiring Web Developer</h1>
           <div className="hero-avatar-container">
             <img src="/profile-pic.jpg" alt="Felicia Löfström" className="hero-avatar" />
+            <span className="animated-emoji hero-avatar-sunflower">🌻</span>
           </div>
           <p className="hero-description">
             Welcome to my digital noticeboard! <br />

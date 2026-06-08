@@ -14,7 +14,7 @@ export const App = () => {
 
       {/* Main Section with Project Grid */}
       <main className="main-content">
-        <div className="skills-sticker-wrapper" style={{ postion: 'relative' }} >
+        <div className="skills-sticker-wrapper">
           <Skills />
 
           <div className="desktop-stickers">
