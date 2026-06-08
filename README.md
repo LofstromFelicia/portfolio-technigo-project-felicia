@@ -1,24 +1,37 @@
-# Portfolio
+# 📌 My Creative Portfolio – Pinboard Edition
 
-Replace this readme with your own information about the project. You can include things like:
+Welcome to my personal portfolio project! This is a unique, responsive React-driven digital pinboard and whiteboard where my web development projects and technical skills are pinned up like sticky notes and decorated with interactive tech stickers. 
 
-- Brief description of the assignment
-- How you approached the task, what tools and techniques you used, and how you planned it
-- If you had more time, what would be next?
-- How to run the project locally
+Leaving standard "clinical white" portfolio designs behind, this project embraces an analogue, cozy, and playful aesthetic using custom handwriting fonts, crooked notes, and dynamic hovering effects.
 
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+---
 
+## 🔗 Live Demo & Repository
+* **Live Site (Cloudflare):** [👉 View my Live Portfolio here!](D_DIN_CLOUDFLARE_LÄNK_HÄR)
 
-## Getting Started with the Project
+* **GitHub Repository:** [💻 Code Repository](https://github.com/LofstromFelicia/portfolio-technigo-project-felicia)
 
-### Dependency Installation & Startup Development Server
+---
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
+## 🚀 Goals & Requirements Met
 
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
+This project successfully fulfills all the core requirements and goals set up for the portfolio assignment:
 
-```bash
-npm i && code . && npm run dev
-```
+* **Component-Driven Architecture:** Built completely with reusable React components, managing structural separation of layout and features.
+* **Dynamic Data Fetching:** Project details and technical skills are managed dynamically through a central `data.json` file and rendered cleanly onto the board using JavaScript's `.map()`.
+* **Bulletproof Responsiveness:** Fully optimized from small mobile screens (`320px`) up to massive desktop screens (`1600px`). 
+    * *Desktop:* Stickers hover and float dynamically around the notes.
+    * *Tablet:* Stickers automatically lock into tight, designated safe-zones around the columns so they never overlap the content.
+    * *Mobile:* Stickers convert seamlessly into a clean, modern dock layout stacked beautifully under the skills block.
+* **Clean Code & Styling:** All inline JavaScript styles have been refactored into modular, readable CSS using structured class structures and explicit media boundary queries.
+
+---
+
+## 🛠️ Tech Stack & Features
+
+* **Framework:** React (Vite)
+* **Styling:** Custom CSS3 with dynamic variables (`:root`), absolute layouts, and advanced `drop-shadow` stacking filters for the sticker outlines.
+* **Fonts:** Integrated hand-written Google Fonts (`Architects Daughter` & `Caveat`) to enforce the board aesthetic.
+* **Deployment:** Automated builds via Cloudflare Pages.
+
+---
