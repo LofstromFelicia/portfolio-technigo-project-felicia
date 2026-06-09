@@ -7,9 +7,9 @@ Leaving standard "clinical white" portfolio designs behind, this project embrace
 ---
 
 ## 🔗 Live Demo & Repository
-* **Live Site (Cloudflare):** [👉 View my Live Portfolio here!](D_DIN_CLOUDFLARE_LÄNK_HÄR)
-
-* **GitHub Pages:** (https://lofstromfelicia.github.io/portfolio-technigo-project-felicia/)
+* **Live Site (Cloudflare):** [👉 View my Live Portfolio here!](https://
+portfolio-technigo-project-felicia.pages.dev
+)
 
 * **GitHub Repository:** [💻 Code Repository](https://github.com/LofstromFelicia/portfolio-technigo-project-felicia)
 
