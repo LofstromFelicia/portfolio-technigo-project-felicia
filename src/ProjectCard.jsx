@@ -3,7 +3,7 @@ import { Tag } from "./Tag"
 export const ProjectCard = ({ project }) => {
   return (
     <article className="project-card pinned-block">
-      <span className="block-pin pin-project">📌</span>
+      <span className="block-pin pin-project" aria-hidden="true">📌</span>
 
       <div className="project-image-container">
         {project.image ? (
@@ -17,7 +17,7 @@ export const ProjectCard = ({ project }) => {
         <h3>{project.name}</h3>
 
         {project.description && (
-          <p className="project-description" style={{ marginBottom: '16px', fontSize: '0.95rem' }}>
+          <p className="project-description">
             {project.description}
           </p>
         )}
@@ -47,6 +47,6 @@ export const ProjectCard = ({ project }) => {
           </a>
         </div>
       </div>
-    </article >
+    </article>
   )
 }

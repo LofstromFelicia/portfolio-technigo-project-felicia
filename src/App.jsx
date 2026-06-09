@@ -27,10 +27,10 @@ export const App = () => {
         </div>
 
         <section className="projects-section">
-          <h2>My Projects <span className="animated-emoji">💻</span></h2>
+          <h2>My Projects <span className="animated-emoji" aria-hidden="true">💻</span></h2>
           <div className="projects-grid">
             {allProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+              <ProjectCard key={project.id || project.name} project={project} />
             ))}
           </div>
         </section>

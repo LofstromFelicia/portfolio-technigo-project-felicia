@@ -3,9 +3,9 @@ export const Skills = () => {
     <section className="skills-section">
       <h2>Skills</h2>
       <div className="skills-grid">
-        <div className="skills-category pinned-block">
-          <span className="block-pin pin-top-left">📌</span>
 
+        <div className="skills-category pinned-block">
+          <span className="block-pin pin-top-left" aria-hidden="true">📌</span>
           <h3>Code</h3>
           <ul>
             <li>HTML5 / CSS3</li>
@@ -14,9 +14,9 @@ export const Skills = () => {
             <li>TypeScript</li>
           </ul>
         </div>
-        <div className="skills-category pinned-block">
-          <span className="block-pin pin-top-left">📌</span>
 
+        <div className="skills-category pinned-block">
+          <span className="block-pin pin-top-left" aria-hidden="true">📌</span>
           <h3>Toolbox</h3>
           <ul>
             <li>Git & GitHub</li>
@@ -24,8 +24,9 @@ export const Skills = () => {
             <li>Cloudflare Pages</li>
           </ul>
         </div>
+
         <div className="skills-category pinned-block">
-          <span className="block-pin pin-top-left">📌</span>
+          <span className="block-pin pin-top-left" aria-hidden="true">📌</span>
           <h3>Upcoming</h3>
           <ul>
             <li>Node.js</li>
@@ -34,6 +35,7 @@ export const Skills = () => {
             <li>Web Accessibility</li>
           </ul>
         </div>
+
       </div>
     </section>
   )

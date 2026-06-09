@@ -34,4 +34,7 @@ This project successfully fulfills all the core requirements and goals set up fo
 * **Fonts:** Integrated hand-written Google Fonts (`Architects Daughter` & `Caveat`) to enforce the board aesthetic.
 * **Deployment:** Automated builds via Cloudflare Pages.
 
+
+## 📝 Credits & Attribution
+* **Favicon:** Star icon created by [Pixel perfect - Flaticon](https://www.flaticon.com/free-icons/star)
 ---

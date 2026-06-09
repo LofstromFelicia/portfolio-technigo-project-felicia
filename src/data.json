@@ -17,7 +17,7 @@
         "HTML5",
         "CSS3"
       ],
-      "cloudflare": "project-business-site-felicia.pages.dev",
+      "cloudflare": "https://project-business-site-felicia.pages.dev",
       "github": "https://github.com/LofstromFelicia/project-business-site-felicia"
     },
     {
@@ -28,7 +28,7 @@
         "CSS3",
         "JavaScript"
       ],
-      "cloudflare": "project-pizzabot-felicia.pages.dev",
+      "cloudflare": "https://project-pizzabot-felicia.pages.dev",
       "github": "https://github.com/LofstromFelicia/project-pizzabot-felicia"
     },
     {
@@ -39,7 +39,7 @@
         "CSS3",
         "JavaScript"
       ],
-      "cloudflare": "the-grand-digital-library-project-technigo.pages.dev",
+      "cloudflare": "https://the-grand-digital-library-project-technigo.pages.dev",
       "github": "https://github.com/LofstromFelicia/technigo-project-library"
     },
     {
@@ -51,7 +51,7 @@
         "JavaScript",
         "APIs"
       ],
-      "cloudflare": "technigo-project-weather-app.pages.dev",
+      "cloudflare": "https://technigo-project-weather-app.pages.dev",
       "github": "https://github.com/LofstromFelicia/technigo-project-weather-app"
     }
   ]
